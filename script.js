@@ -4,11 +4,11 @@ function countdown() {
   const currentYear = now.getFullYear();
 
   // Set birthday to Nov 15 at 00:00:00
-  let birthday = new Date(currentYear, 6, 9, 0, 0, 0); // Month is 0-indexed (10 = November)
+  let birthday = new Date(currentYear, 5, 9, 0, 0, 0); // Month is 0-indexed (10 = November)
 
   // If today is past birthday, use next year's
   if (now > birthday && now.toDateString() !== birthday.toDateString()) {
-    birthday = new Date(currentYear + 1, 6, 9, 0, 0, 0);
+    birthday = new Date(currentYear + 1, 5, 9, 0, 0, 0);
   }
 
   const diff = birthday - now;
